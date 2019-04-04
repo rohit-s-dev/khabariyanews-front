@@ -1,0 +1,26 @@
+{
+  "name": "khabariyanews",
+  "version": "1.0.0",
+  "description": "news mobile khabriyanews",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohit-s-dev/khabariyanews-front.git"
+  },
+  "keywords": [
+    "khabariyanews",
+    "news",
+    "website",
+    "front",
+    "website"
+  ],
+  "author": "Rohit Sagar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rohit-s-dev/khabariyanews-front/issues"
+  },
+  "homepage": "https://github.com/rohit-s-dev/khabariyanews-front#readme"
+}
