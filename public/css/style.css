@@ -1,0 +1,21 @@
+/* 
+==========================================================================================
+Name: Khabriyanews 
+Version: 1.0.0
+Developed By: UTESH TECHNOLOGIES (http://utglobe.com)
+==========================================================================================
+*/
+
+
+
+/* Colors */
+:root {
+    --primary-color: rgb(4, 11, 106);
+    --secondary-color: rgb(215, 8, 8);
+}
+
+
+
+body {
+    background: var(--primary-color);
+}
