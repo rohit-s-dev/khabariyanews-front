@@ -10,12 +10,83 @@ Developed By: UTESH TECHNOLOGIES (http://utglobe.com)
 
 /* Colors */
 :root {
-    --primary-color: rgb(4, 11, 106);
-    --secondary-color: rgb(215, 8, 8);
+
+    /* Main Colors */
+    --p-color: rgb(4, 11, 106);
+    --s-color: rgb(215, 8, 8);
+
+
+    /* Breaking News Box Colors */
+
+    --breakingNews-gradient: linear-gradient(to bottom, rgb(159, 1, 0, 1) 50%, rgb(248, 9, 9)100% );
+
+
+    /* News Area  */
+    --background-image : url(/public/images/main_bg/main_bg.jpg) no-repeat;
+    --newsArea-overlay-color : rgba(4,11,106, .7);
+    
+    
+    /* Font Families */
+ 
+
+
 }
 
 
 
 body {
-    background: var(--primary-color);
+    
+}
+
+/*=====================Main Header Top==============================*/
+.main-header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+
+/*=====================Breaking News==============================*/ 
+#breakingNews {
+    background: var(--breakingNews-gradient);
+}
+
+.breakingNewsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: .8rem 0;
+    color: #fff;
+}
+
+.breakingNewsDiv .breakingNews__box {
+    
+}
+
+.breakingNewsDiv .breakingNews__box--title {
+    margin: 0;
+}
+
+.breakingNewsDiv p {
+    font-size: .7rem;
+    margin: 0;
+}
+
+
+/* ===================================News Area=================== */
+#newsArea {
+    background: var(--background-image);
+    background-size: cover; 
+    position: relative;
+}
+
+#newsArea::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--newsArea-overlay-color);
 }
