@@ -23,7 +23,7 @@ Developed By: UTESH TECHNOLOGIES (http://utglobe.com)
 
 
     /* News Area  */
-    --background-image : url(/public/images/main_bg/main_bg.jpg) no-repeat;
+    --background-image : url(../images/main_bg/main_bg.jpg) no-repeat;
     --newsArea-overlay-color : rgba(4,11,106, .7);
     
     
@@ -80,8 +80,10 @@ body {
     background: var(--background-image);
     background-size: cover; 
     position: relative;
+    z-index: 1;
+    padding-top: 1rem;
+   
 }
-
 
 #newsArea::before {
     position: absolute;
@@ -91,9 +93,8 @@ body {
     top: 0;
     left: 0;
     background: var(--newsArea-overlay-color);
+    z-index: -1;
 }
-
-
 
 #newsArea ul {
     display: flex;
@@ -104,6 +105,80 @@ body {
 
 #newsArea ul li a {
 
+}
+
+.newsbox {
+    /* background-color: #d70808; */
+    width: 110px;
+    height:110px;
+    border-radius: 100%;
+    border: 2px dashed rgb(255, 255, 255);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+}
+
+.newsbox_heading{
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+
+@media (max-width: 478px) {
+    .newsbox {
+        margin-top: 1rem;
+        width: 100px;
+        height: 100px;
+        border: 1.5px dashed rgb(255, 255, 255);
+    }
+
+    .newsbox .newsbox_heading {
+        font-size: 1rem;
+    }
+}
+
+
+@media (min-width: 478px) {
+    .newsbox {
+        /* margin-top: 1rem 1rem; */
+        width: 130px;
+        height: 130px;
+        border: 1px dashed rgb(255, 255, 255);
+    }
+
+    .newsbox .newsbox_heading {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .newsbox {
+        /* margin-top: 1rem 1rem; */
+        width: 170px;
+        height: 170px;
+        border: 2px dashed rgb(255, 255, 255);
+    }
+
+    .newsbox .newsbox_heading {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 990px) {
+    .newsbox {
+        /* margin-top: 1rem 1rem; */
+        width: 220px;
+        height: 220px;
+        border: 2px dashed rgb(255, 255, 255);
+        font-size: 2rem;
+    }
+    .newsbox .newsbox_heading {
+        font-size: 1.5rem;
+    }
 }
 
 /* ========================= Page Area ============================ */
@@ -232,59 +307,3 @@ body {
 }
 
 
-
-
-
-
-@media (max-width: 478px) {
-    .newsbox {
-        margin-top: 1rem;
-        width: 100px;
-        height: 100px;
-        border: 1.5px dashed rgb(255, 255, 255);
-    }
-
-    .newsbox .newsbox_heading {
-        font-size: 1rem;
-    }
-}
-
-
-@media (min-width: 478px) {
-    .newsbox {
-        /* margin-top: 1rem 1rem; */
-        width: 130px;
-        height: 130px;
-        border: 1px dashed rgb(255, 255, 255);
-    }
-
-    .newsbox .newsbox_heading {
-        font-size: 1rem;
-    }
-}
-
-@media (min-width: 769px) {
-    .newsbox {
-        /* margin-top: 1rem 1rem; */
-        width: 170px;
-        height: 170px;
-        border: 2px dashed rgb(255, 255, 255);
-    }
-
-    .newsbox .newsbox_heading {
-        font-size: 1.2rem;
-    }
-}
-
-@media (min-width: 990px) {
-    .newsbox {
-        /* margin-top: 1rem 1rem; */
-        width: 220px;
-        height: 220px;
-        border: 2px dashed rgb(255, 255, 255);
-        font-size: 2rem;
-    }
-    .newsbox .newsbox_heading {
-        font-size: 1.5rem;
-    }
-}
