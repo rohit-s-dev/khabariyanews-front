@@ -1,3 +1,4 @@
 bin
 private
 public/node_modules
+*.zip
