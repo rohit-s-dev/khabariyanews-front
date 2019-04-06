@@ -25,6 +25,14 @@ $(document).ready(function(){
 
         $('#exampleModalCenter').on('hidden.bs.modal', function (e) {
             $('.main-container').removeClass('blur');
-          })
+          });
     });
+
+    // data and time
+
+    var date = moment().format('M/D/Y');
+    var time = moment().format('h:mm:ss a');
+    $('.date').text(date);
+    $('.time').text(time);
+    
 });
