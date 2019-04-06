@@ -16,4 +16,15 @@ $(document).ready(function(){
         allowCss3Support: true,
         pauseOnHover: true
     });
+
+    // subscribe us modal 
+    $('.subscribe_us').on('click', function(){
+
+        $('#exampleModalCenter').modal('show');
+        $('.main-container').addClass('blur');
+
+        $('#exampleModalCenter').on('hidden.bs.modal', function (e) {
+            $('.main-container').removeClass('blur');
+          })
+    });
 });

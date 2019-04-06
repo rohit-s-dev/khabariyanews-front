@@ -41,6 +41,76 @@ body {
     letter-spacing: 2.5px;
 }
 
+/* extras */
+.modal {
+    z-index: 999999999999999999999999999;
+}
+
+/* effects */
+
+.main-container {
+    transition: all .3s ease;
+}
+
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+/* ================================================================================ */
+/* subscribe us */
+/* ================================================================================ */
+
+.subscribe_us {
+    position: fixed;
+    z-index: 999999;
+    top: 50%;
+    background: var(--breakingNews-gradient);
+    color: #fff;
+    padding: .6rem;
+    border: 1px rgb(255, 0, 0) solid;
+    writing-mode: vertical-lr;
+    cursor: pointer;
+    /* text-orientation: mixed; */
+    
+}
+
+.subscribe_us p {
+    padding: 0;
+    margin: 0;
+    
+}
+
+@media (max-width: 478px) {
+    .subscribe_us {
+        padding: .2rem 0;
+    }
+}
+
+/* ================================================================================= */
+/* subscribe us modal input */
+/* ================================================================================= */
+.sub_box {
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.sub_box input.subscribe_e {
+    border: none;
+    width: 100%;
+    background: rgb(248, 248, 248);
+    padding: .8rem;
+}
+
+.sub_btn {
+    border: none;
+    background: var(--s-color);
+    color: #fff;
+}
+
+
+
 /*=====================Main Header Top==============================*/
 .main-header__top {
     display: flex;
@@ -48,10 +118,39 @@ body {
     justify-content: space-between;    
 }
 
+.email {
+    color: black;
+    font-weight: bold;
+    transition: color ease .3s;
+}
+
+.email:hover {
+    color: var(--s-color);
+    text-decoration: none;
+}
+
+.date_time {
+    font-weight: bold;
+}
+
+@media (max-width: 478px) {
+    .email {
+        display: none;
+    }
+    .date_time {
+        font-size: .8rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 
 /*=====================Breaking News==============================*/ 
 #breakingNews {
     background: var(--breakingNews-gradient);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .breakingNewsDiv {
@@ -69,16 +168,18 @@ body {
 
 .breakingNewsDiv .breakingNews__box--title {
     margin: 0;
+    font-weight: 700;
 }
 
 .breakingNewsDiv p {
     font-size: 1rem;
     margin: 0;
+    
 }
 
 
 .marquee {
-    width: 100%;
+    width: 80%;
     overflow: hidden;
     /* border: 1px solid #ccc; */
     /* pointer-events: none; */
@@ -87,6 +188,13 @@ body {
 }
 
 
+@media (max-width: 478px) {
+    .breakingNewsDiv .breakingNews__box--title {
+       font-size: .8rem;
+        font-weight: 700;
+    }
+}
+
 /* ===================================News Area=================== */
 #newsArea {
     background: var(--background-image);
@@ -94,6 +202,7 @@ body {
     position: relative;
     z-index: 1;
     padding-top: 1rem;
+    padding-bottom: 1rem;
    
 }
 
