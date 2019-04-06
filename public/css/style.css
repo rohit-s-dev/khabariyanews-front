@@ -13,6 +13,7 @@ Developed By: UTESH TECHNOLOGIES (http://utglobe.com)
 
     /* Main Colors */
     --p-color: rgb(4, 11, 106);
+    --p-color-dark: rgb(3, 5, 56);
     --s-color: rgb(215, 8, 8);
 
 
@@ -81,6 +82,7 @@ body {
     position: relative;
 }
 
+
 #newsArea::before {
     position: absolute;
     content: '';
@@ -89,4 +91,200 @@ body {
     top: 0;
     left: 0;
     background: var(--newsArea-overlay-color);
+}
+
+
+
+#newsArea ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+#newsArea ul li a {
+
+}
+
+/* ========================= Page Area ============================ */
+#pageArea {
+    background: var(--background-image);
+    background-size: cover; 
+    position: relative;
+    z-index: 1;
+}
+
+#pageArea::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--newsArea-overlay-color);
+    z-index: -1;
+}
+
+/* Small Links */
+.small_links  {
+   
+}
+
+.small_links ul  {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding-right: 0;
+    padding: .5rem;
+}
+
+.small_links ul li {
+    position: relative;
+}
+
+.small_links ul span {
+    color: #fff;
+    padding: 0 .5rem;
+}
+
+.small_links ul li a {
+    color: #fff;
+    position: relative;
+}
+
+
+/* NewsArticles */
+#newArticle {
+    background: var(--p-color-dark);
+    padding: .8rem 0;
+}
+
+.newsArticle__Box .newsArticle__Title {    
+    color: #fff;
+    font-weight: 500;
+}
+
+.newsArticle__Box .newsArticleContent__Box {
+
+    border-top: 1px solid #fff;
+    color: #fff;
+    font-size: .8rem;
+    border-bottom: 1px solid #fff;
+    padding: .5rem 0;
+
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.newsArticle__Box .newsArticleContent__Box .newsArticle__Imgbox {
+    margin-right: 1rem;
+}
+
+.share_social_links  {
+    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.share_social_links ul {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+.share_social_links ul li a {
+    padding: .2rem;
+}
+
+.share_social_links ul li a img {
+    width: 20px;
+}
+
+/* Media Queries */
+
+@media (min-width: 450px) {
+    
+    .newsArticle__Imgbox img {
+        max-width: 250px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .newsArticleContent__Box {
+        flex-direction:column;
+    }
+
+    .newsArticle__Imgbox img {
+        max-width: 150px;
+    }
+}
+@media (max-width: 400px) {
+    .newsArticleContent__Box {
+        flex-direction:row;
+    }
+
+    .newsArticle__Imgbox img {
+        max-width: 150px;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 478px) {
+    .newsbox {
+        margin-top: 1rem;
+        width: 100px;
+        height: 100px;
+        border: 1.5px dashed rgb(255, 255, 255);
+    }
+
+    .newsbox .newsbox_heading {
+        font-size: 1rem;
+    }
+}
+
+
+@media (min-width: 478px) {
+    .newsbox {
+        /* margin-top: 1rem 1rem; */
+        width: 130px;
+        height: 130px;
+        border: 1px dashed rgb(255, 255, 255);
+    }
+
+    .newsbox .newsbox_heading {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .newsbox {
+        /* margin-top: 1rem 1rem; */
+        width: 170px;
+        height: 170px;
+        border: 2px dashed rgb(255, 255, 255);
+    }
+
+    .newsbox .newsbox_heading {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 990px) {
+    .newsbox {
+        /* margin-top: 1rem 1rem; */
+        width: 220px;
+        height: 220px;
+        border: 2px dashed rgb(255, 255, 255);
+        font-size: 2rem;
+    }
+    .newsbox .newsbox_heading {
+        font-size: 1.5rem;
+    }
 }
