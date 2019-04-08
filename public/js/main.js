@@ -32,6 +32,7 @@ $(document).ready(function(){
 
     var date = moment().format('M/D/Y');
     var time = moment().format('h:mm:ss a');
+    
     $('.date').text(date);
     $('.time').text(time);
     
