@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="rgb(4, 11, 106)"> 
-
-    <!-- ============================ Vendor Css ================================== -->
-    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.css">
-    <!-- ============================ Style Css ================================== -->
-    <link rel="stylesheet" href="./css/style.css">
-    <title>KHABARIYA NEWS</title>
-
-
-</head>
-<body>
-
+<?php 
+    include('includes/header.php');
+?>
     <!-- subscribe us -->
     <div class="subscribe_us">
         <p>Subscribe Me</p>
@@ -24,115 +9,87 @@
 
     <div class="main-container">
         <!-- ============================ Header ======================================= -->
-    <div class='main-header'>
-            <div class="container">
-                <div class="main-header__top">
-                    <!-- Logo -->
-                    <a href="index.html" class="navbar-brand">
-                        <img src="images/logo/khabariyanews-203x45.png" alt="khabriyanews logo" class="img-fluid">
-                    </a>
-    
-                    <a class="email" href="mailto: info@khabariyanews.com">info@khabariyanews.com</a>
-    
-                    <!-- Clock -->
-                    <div class='date_time'>
-                        <span class='date'>
-                            
-                        </span>
-                        <span class='time' id="txt">
-                       
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php 
+        require_once('includes/main-header.php');
+        ?>
     
         <!-- ============================ Breaking News ======================================= -->
-        <section id='breakingNews'>
-            <div class="container">
-                <div class="breakingNewsDiv">
-                    <div class="breakingNews__box">
-                        <h6 class='breakingNews__box--title'>Breaking News</h6>
-                    </div>
-                    <div class="marquee">
-                        <p class='breakingNews__box--para'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi inventore maxime doloribus ratione est unde explicabo natus, sunt similique minima tempore harum at nemo fugiat in minus quod dolor? </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
+        
+        <?php 
+        require_once('includes/breaking.php');
+        ?>
         <!-- ============================ News Area ======================================= -->
         <section id="newsArea">
             <div class="container-fluid">
                 
                 <ul>
                     <li>
-                        <a href="news.html">
+                        <a href="business">
                             <div class="newsbox">
                                 <h3 class="newsbox_heading"> Business</h3>
                             </div>
                         </a> 
                     </li>
                     <li>
-                        <a href="news.html">
+                        <a href="sports">
                             <div class="newsbox">
                                 <h3 class="newsbox_heading"> Sports</h3>
                             </div>
                         </a> 
                     </li>
                     <li>
-                        <a href="news.html">
-                            <div class="newsbox">
+                        <a href="politics">
+                            <div class="newsbox" style='background: url(images/politics.png) no-repeat; background-position: top; '>
                                 <h3 class="newsbox_heading"> Politics</h3>
                             </div>
                         </a> 
                     </li>
                     <li>
-                        <a href="news.html">
+                        <a href="entertainment">
                             <div class="newsbox">
                                 <h3 class="newsbox_heading"> Entertainment</h3>
                             </div>
                         </a> 
                     </li>
                     <li>
-                        <a href="news.html">
+                        <a href="education">
                             <div class="newsbox">
                                 <h3 class="newsbox_heading"> Education</h3>
                             </div>
                         </a> 
                     </li>
                     <li>
-                        <a href="news.html">
+                        <a href="world">
                             <div class="newsbox">
                                 <h3 class="newsbox_heading"> World</h3>
                             </div>
                         </a> 
                     </li>
                     <li>
-                        <a href="news.html">
+                        <a href="technology">
                             <div class="newsbox">
                                 <h3 class="newsbox_heading"> Technology</h3>
                             </div>
                         </a> 
                     </li>
                     <li>
-                        <a href="news.html">
+                        <a href="food">
                             <div class="newsbox">
                                 <h3 class="newsbox_heading"> Food</h3>
                             </div>
                         </a> 
                     </li>
                     <li>
-                        <a href="news.html">
+                        <a href="fashion">
                             <div class="newsbox">
-                                <h3 class="newsbox_heading"> Faishon</h3>
+                                <h3 class="newsbox_heading"> Fashion</h3>
                             </div>
                         </a> 
                     </li>
                     <li>
-                        <a href="news.html">
+                        <a href="more">
                             <div class="newsbox">
-                                <h3 class="newsbox_heading"> More News </h3>
+                                <h3 class="newsbox_heading"> More</h3>
                             </div>
                         </a> 
                     </li>
@@ -159,16 +116,4 @@
           </div>
         </div>
     </div>
-   <!-- ============================ Vendor js ======================================= -->
-   <script src="./vendor/jquery/jquery-3.3.1.js"></script>
-   <script src="./vendor/popper.js/popper.js"></script>
-   <script src="./vendor/bootstrap/js/bootstrap.js"></script>
-    <script src="./vendor/marqueetext/hMarquee.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
-    <script src="./vendor/moment/moment.js"></script>
-
-
-    <!-- ============================ Main js =======================================-->
-    <script src="./js/main.js"></script>
-</body>
-</html>
+    <?php include "includes/footer.php"; ?>

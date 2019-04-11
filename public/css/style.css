@@ -230,7 +230,7 @@ body {
 }
 
 #newsArea ul li a:hover .newsbox {
-    background: var(--newsBox-color-hover);
+    /* background: var(--newsBox-color-hover); */
     transition: all .3s ease-in;
     transform: scale(1.03) rotate(05deg);
 }
@@ -250,7 +250,20 @@ body {
     align-items: center;
     justify-content: center;
     margin: 1.5rem;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+}
 
+.newsbox::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #0a0352bd;
+    z-index: -2;
+    top: 0;
+    left: 0;
 }
 
 .newsbox_heading {
@@ -393,9 +406,11 @@ body {
     transition: all .3s ease;
 }
 
-.p_pagination .arrow-left:hover,
-.p_pagination .arrow-right:hover {
+.p_pagination .arrow-left:hover {
     transform: translateX(-5px);
+}
+.p_pagination .arrow-right:hover  {
+    transform: translateX(5px);
 }
 
 .p_pagination img {

@@ -29,11 +29,16 @@ $(document).ready(function(){
     });
 
     // data and time
+    var datetime = null,
+        date = null;
 
-    var date = moment().format('M/D/Y');
-    var time = moment().format('h:mm:ss a');
-    
-    $('.date').text(date);
-    $('.time').text(time);
-    
+    var update = function() {
+       var date = moment().format('M/D/Y');
+       var time = moment().format('h:mm:ss a');
+
+       $('.date').html(date);
+        $('.time').html(time);
+    };
+
+    setInterval(update, 500);
 });
