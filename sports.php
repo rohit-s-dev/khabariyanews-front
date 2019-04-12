@@ -26,14 +26,14 @@
             <div class="small_links">
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="index">
                             Home
                         </a>
                     </li>
                     <span>/</span>
                     <li>
                         <a href="" class="act">
-                            Business News
+                            Sports
                         </a>
                     </li>
                     <span>/</span>
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="link-title">
-                    <h4>Business News</h4>
+                    <h4>Sports</h4>
                 </div>
 
                 <div class="arrow-right">
@@ -67,7 +67,7 @@
     <main id="newArticle">
         <div class="container">
             <?php 
-                $news = "SELECT * FROM post WHERE category = 'fashion' ";
+                $news = "SELECT * FROM post WHERE category = 'sports' ";
                 $newsQ = mysqli_query($con, $news);
                 $res = mysqli_num_rows($newsQ);
 
@@ -87,13 +87,13 @@
                 <p class='newsArticle__Title'><?php echo $title ?></p>
                 <div class="newsArticleContent__Box">
                     <div class="newsArticle__Imgbox">
-                        <img src="../newsImages/<?php echo $img ?>" alt="" class="img-fluid">
+                        <img src="newsImages/<?php echo $img ?>" alt="" class="img-fluid">
                     </div>
                     <div class="newsArticle__des">
                         <?php 
                         
-                        echo $content;
-
+                        
+                        echo "<p>".$content."</p>";
                         ?>
 
                         <div class="share_social_links">
@@ -141,5 +141,7 @@
             ?>
         </div>
     </main>
+    </div>
+    <?php include "includes/newsModal.php"; ?>
 
     <?php include "includes/footer.php"; ?>

@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="link-title">
-                    <h4>Business News</h4>
+                    <h4>Technology</h4>
                 </div>
 
                 <div class="arrow-right">
@@ -67,7 +67,7 @@
     <main id="newArticle">
         <div class="container">
             <?php 
-                $news = "SELECT * FROM post WHERE category = 'politics' ";
+                $news = "SELECT * FROM post WHERE category = 'technology ";
                 $newsQ = mysqli_query($con, $news);
                 $res = mysqli_num_rows($newsQ);
 
@@ -87,12 +87,12 @@
                 <p class='newsArticle__Title'><?php echo $title ?></p>
                 <div class="newsArticleContent__Box">
                     <div class="newsArticle__Imgbox">
-                        <img src="../newsImages/<?php echo $img ?>" alt="" class="img-fluid">
+                        <img src="newsImages/<?php echo $img ?>" alt="" class="img-fluid">
                     </div>
                     <div class="newsArticle__des">
                         <?php 
                         
-                        echo $content;
+                        echo "<p>".$content."</p>";
 
                         ?>
 
@@ -141,5 +141,7 @@
             ?>
         </div>
     </main>
+    </div>
+    <?php include "includes/newsModal.php"; ?>
 
     <?php include "includes/footer.php"; ?>

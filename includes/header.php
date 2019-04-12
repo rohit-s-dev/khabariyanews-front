@@ -1,7 +1,7 @@
 <?php 
-require_once "../private/includes/func.php";
-require_once("../private/config/database.php");
-require_once("../private/config/connnection.php");
+require_once "private/includes/func.php";
+require_once("private/config/database.php");
+require_once("private/config/connnection.php");
 
 ?>
 

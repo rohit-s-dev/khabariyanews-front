@@ -1,4 +1,4 @@
-    <?php 
+<?php 
         include('includes/header.php');
     ?>
     <!-- subscribe us -->
@@ -33,7 +33,7 @@
                     <span>/</span>
                     <li>
                         <a href="" class="act">
-                            Business News
+                            Politics
                         </a>
                     </li>
                     <span>/</span>
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="link-title">
-                    <h4>Business News</h4>
+                    <h4>Politics</h4>
                 </div>
 
                 <div class="arrow-right">
@@ -67,7 +67,7 @@
     <main id="newArticle">
         <div class="container">
             <?php 
-                $news = "SELECT * FROM post WHERE category = 'business' ";
+                $news = "SELECT * FROM post WHERE category = 'politics' ";
                 $newsQ = mysqli_query($con, $news);
                 $res = mysqli_num_rows($newsQ);
 
@@ -92,7 +92,7 @@
                     <div class="newsArticle__des">
                         <?php 
                         
-                        echo $content;
+                        echo "<p>".$content."</p>";
 
                         ?>
 
@@ -141,4 +141,7 @@
             ?>
         </div>
     </main>
+    </div>
+    <?php include "includes/newsModal.php"; ?>
+
     <?php include "includes/footer.php"; ?>

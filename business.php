@@ -1,4 +1,4 @@
-<?php 
+    <?php 
         include('includes/header.php');
     ?>
     <!-- subscribe us -->
@@ -67,7 +67,7 @@
     <main id="newArticle">
         <div class="container">
             <?php 
-                $news = "SELECT * FROM post WHERE category = 'world' ";
+                $news = "SELECT * FROM post WHERE category = 'business' ";
                 $newsQ = mysqli_query($con, $news);
                 $res = mysqli_num_rows($newsQ);
 
@@ -87,12 +87,12 @@
                 <p class='newsArticle__Title'><?php echo $title ?></p>
                 <div class="newsArticleContent__Box">
                     <div class="newsArticle__Imgbox">
-                        <img src="../newsImages/<?php echo $img ?>" alt="" class="img-fluid">
+                        <img src="newsImages/<?php echo $img ?>" alt="" class="img-fluid">
                     </div>
                     <div class="newsArticle__des">
                         <?php 
                         
-                        echo $content;
+                        echo "<p>".$content."</p>";
 
                         ?>
 
@@ -141,4 +141,8 @@
             ?>
         </div>
     </main>
-<?php include "includes/footer.php"; ?>
+    </div>
+    <?php include "includes/newsModal.php"; ?>
+
+    <?php include "includes/footer.php"; ?>
+

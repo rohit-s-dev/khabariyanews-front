@@ -67,7 +67,7 @@
     <main id="newArticle">
         <div class="container">
             <?php 
-                $news = "SELECT * FROM post WHERE category = 'entertainment' ";
+                $news = "SELECT * FROM post WHERE category = 'world' ";
                 $newsQ = mysqli_query($con, $news);
                 $res = mysqli_num_rows($newsQ);
 
@@ -87,7 +87,7 @@
                 <p class='newsArticle__Title'><?php echo $title ?></p>
                 <div class="newsArticleContent__Box">
                     <div class="newsArticle__Imgbox">
-                        <img src="../newsImages/<?php echo $img ?>" alt="" class="img-fluid">
+                        <img src="newsImages/<?php echo $img ?>" alt="" class="img-fluid">
                     </div>
                     <div class="newsArticle__des">
                         <?php 
@@ -141,5 +141,6 @@
             ?>
         </div>
     </main>
-
-    <?php include "includes/footer.php"; ?>
+    </div>
+<?php include "includes/newsModal.php"; ?>
+<?php include "includes/footer.php"; ?>

@@ -33,7 +33,7 @@
                     <span>/</span>
                     <li>
                         <a href="" class="act">
-                            Business News
+                            Education
                         </a>
                     </li>
                     <span>/</span>
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="link-title">
-                    <h4>Business News</h4>
+                    <h4>Education</h4>
                 </div>
 
                 <div class="arrow-right">
@@ -87,12 +87,12 @@
                 <p class='newsArticle__Title'><?php echo $title ?></p>
                 <div class="newsArticleContent__Box">
                     <div class="newsArticle__Imgbox">
-                        <img src="../newsImages/<?php echo $img ?>" alt="" class="img-fluid">
+                        <img src="newsImages/<?php echo $img ?>" alt="" class="img-fluid">
                     </div>
                     <div class="newsArticle__des">
                         <?php 
                         
-                        echo $content;
+                        echo "<p>".$content."</p>";
 
                         ?>
 
@@ -141,5 +141,8 @@
             ?>
         </div>
     </main>
+    </div>
+    <?php include "includes/newsModal.php"; ?>
+
 
     <?php include "includes/footer.php"; ?>
